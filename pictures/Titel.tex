@@ -1,0 +1,99 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{HKS66}{RGB}{118,185,0}          %% HKS51, HTW-Grün
+\newcommand{\headcolor}{HKS66}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+\usepackage{geometry}
+%\makeatletter
+\setlength\paperheight     {297mm}
+\setlength\paperwidth  	   {210mm}
+\setlength\headheight      {2ex}
+\setlength\headsep         {4ex} %2
+\setlength\footskip        {35pt} %25
+\setlength\textwidth       {160mm}
+\setlength\textheight      {240mm} %245
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hsfont}{\fontfamily{phv}\fontseries{m}\fontshape{n}\selectfont}
+\newcommand{\hsheadfont}{\fontfamily{phv}\fontseries{b}\fontshape{n}\selectfont}
+
+
+    {
+      \thispagestyle{empty}
+      \parindent=0pt
+      \begin{minipage}[t]{0.61\textwidth}
+   \hfill
+      \end{minipage}
+      \begin{minipage}[t]{0.35\textwidth}
+    \vskip -5em
+	\begin{flushright}
+                 \mbox{\includegraphics[width=1.2\textwidth]{pictures/Logo_HTW_Berlin}}
+                 \end{flushright}
+                 \vspace{ 2em}
+      \end{minipage}
+
+      \textcolor{HKS66}{\rule{\linewidth}{.4mm}}
+      \vspace{3em}
+  
+          \LARGE {Fachbereich Energie und Information}\\
+
+         \vspace{2em}
+
+
+
+          \huge \textbf{19. GI/ITG KuVS Fachgespräch Sensornetze}
+	  \vspace{1.5em}
+           
+           \Large \textbf{Thomas Scheffler \& Christoph Lange (Hrsg.)}
+
+	  \vspace{0.3em}
+           
+%           \Large \textbf{15. September 2022}
+	 \Large{15. September 2022}
+
+	  \vspace{4em}
+
+       
+          \textbf{\huge{Proceedings}}
+       
+      \vspace*{\stretch{0.5}}
+      %
+
+     
+\hspace{ 2em}
+\begin{flushright}
+   Hochschule für Technik und Wirtschaft\\
+      10313 Berlin\\
+
+ \end{flushright}
+         
+      
+      %
+
+
+      \textcolor{HKS66}{\rule{\linewidth}{0.4mm}}\\[1.5ex]
+       \begin{hsheadfont}
+         % leer
+         %~\hfill~
+       \end{hsheadfont}
+    }
+    
+
+\end{document}  

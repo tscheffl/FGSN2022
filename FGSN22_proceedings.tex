@@ -1,0 +1,322 @@
+%%
+%% This is file `example3optim.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% confproc.dtx  (with options: `example3optim')
+%% 
+%% This is `example3optim.tex', an example file for the confproc package.
+%% Copyright (c) 2011 by Vincent Verfaille <confproc.verfaille@gmail.com>
+%% 
+%% This file is part of the confproc package.
+%% -------------------------------------------
+%% 
+%% It may be distributed and/or modified under the conditions of the
+%% LaTeX Project Public License, either version 1.2 of this license or
+%% (at your option) any later version.
+%% 
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX version
+%% 1999/12/01 or later.
+%% 
+%% This file may not be distributed without the original source file
+%% `confproc.dtx'.
+%% 
+%% The list of all files belonging to the confproc package is given in
+%% the `readme.txt' file.
+%% 
+%% For more details, LaTeX the source `confproc.dtx'.
+%% 
+\documentclass[a4paper,% [letterpaper] | a4paper
+  10pt,%                     [10pt] | 11pt | 12pt
+  oneside,%                  [twoside] | oneside
+  onesidepapers,%            [twosidepapers] | onesidepapers
+  electronic,%               [electronic] | printed
+  binding=0mm,%              [0mm]
+  papers=countpages,%             empty | draft | [final]
+  headers=allpages,%        none | pdfonly | exceptpdf | [allpages]
+  bib=backref,%              [none] | merge | backref | final
+  paperselec=all,%           [all] | p_001 | paper_2 | 3 ...
+  onecoltoc,%                [onecoltoc] | twocoltoc
+  tocnum=right,%              [left] | right
+  twocolbib,%                [twocolbib] | onecolbib
+  twocolindex,%            [threecolindex] | twocolindex
+  checktitle=false,%         true | [false]
+  checkauthor=false,%        true | [false]
+  showpapernumber=false,%    true | [false]
+  movepagenumber=true,%     true | [false]
+  showmarginlines=false,%    true | [false]
+  colorheaders=black,%       [black] | red | any color!
+  debug=false,%              true | [false]
+  verbose=false,%            true | [false]
+  pdftk=false,%               true | [false]
+%  hyperref={bookmarksdepth=1,bookmarksopen,bookmarksopenlevel=0,%
+%    linkcolor=colorforlink,urlcolor=colorforurl}, % [blue, blue, blue]
+  geometry={text={175truemm,226truemm},% A4 & letter
+    inner=0.69in,top=23.9mm,bottom=38mm,footskip=10.4mm,voffset=-2.8mm},%letter
+  ]{confproc_22}
+%%%    inner=0.69in,top=33.9mm,bottom=38mm,footskip=10.4mm,voffset=-4.8mm},%A4
+%%\input{exclass}
+\usepackage{setspace}
+\usepackage{xkeyval}
+\usepackage{newapave}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[super]{nth}
+\usepackage{hyperref}
+\hypersetup{
+bookmarks=true,
+bookmarksdepth=2,
+bookmarksopen=true,
+bookmarksopenlevel=2,%
+bookmarksnumbered=true
+linkcolor=red,
+urlcolor=red,%
+a4paper = true,
+}
+
+
+\setlength{\LaTeXxShift}{0pt}
+\setlength{\LaTeXyShift}{-3mm} %letter
+\setlength{\WordxShift}{10pt}
+\setlength{\WordyShift}{-40pt}
+
+\definecolor{colorforlink}{rgb}{0,0,0.8}
+\definecolor{colorforcite}{rgb}{0,0.8,0}
+\definecolor{colorforurl}{rgb}{0,0,1}
+
+\newcommand{\FGSNxname}{% \nth{9} %
+ 19. GI/ITG KuVS Fachgespräch Sensornetze (FGSN 2022)}
+\newcommand{\FGSNxdate}{September 15, 2022}
+\newcommand{\FGSNxaddress}{Berlin, Germany}
+
+\renewcommand{\procpdfauthor}{Thomas Scheffler, Hochschule für Technik und Wirtschaft Berlin}
+\renewcommand{\procpdftitle}{FGSN-2022 Proceedings - \FGSNxaddress}
+\renewcommand{\procpdfsubject}{Conference proceedings}
+
+\renewcommand{\procchead}{} %
+\renewcommand{\proclhead}{{\em \small \FGSNxname, \FGSNxaddress, \FGSNxdate}}
+\renewcommand{\proccfoot}{{\small \thepage}}
+\setlength{\procfootvskip}{1.2mm}
+\setlength{\procoptfootvskip}{4mm}
+
+\author{\procpdfauthor}
+\title{\FGSNxname\\ \FGSNxaddress}
+\date{\FGSNxdate}
+
+\renewcommand{\contentsname}{Day-by-Day Conference Program}
+\renewcommand{\bibname}{General Bibliography}
+\renewcommand{\indexname}{List of Authors}
+\renewcommand{\PAPERPATH}{papers/}
+\newcommand{\PICTPATH}{pictures/}
+ \newcommand{\TEXTPATH}{}
+ \newcommand{\BIBPATH}{}
+\newcommand{\procbibfile}{\BIBPATH exbiblio}
+\newcommand{\myaddhruletotoc}{\vspace*{0.1cm}%
+  \noindent\protect\hrulefill\par\vspace*{-0.15cm}}
+\newcommand{\myaddthickhruletotoc}{\vspace*{0.5cm}%
+  \noindent\protect\hrule height 0.6ex \hfill\par\vspace*{0.1cm}}
+\renewcommand{\procday}[1]{%
+  \phantomsection%
+  \addcontentsline{toc}{part}{#1}} % \centerline{#1}
+\renewcommand{\session}[1]{%
+  \phantomsection%
+  \addcontentsline{toc}{chapter}{#1}}
+%% idem for left/right numbering
+\renewcommand{\mainmattertocstyle}{
+  \titlecontents{part}[0pt]%
+    {\addvspace{3mm}}%
+    {\myaddthickhruletotoc\Large\bfseries}%
+    {\myaddthickhruletotoc\Large\bfseries}%
+    {}%
+    [\addvspace{0.5mm}]%
+  \titlecontents{chapter}[0pt]%
+    {\addvspace{2mm}}%
+    {\myaddhruletotoc\large\bfseries\itshape}%
+    {\myaddhruletotoc\large\bfseries\itshape}%
+    {}%
+    [\addvspace{0.5mm}]%
+}
+%%\renewcommand{\papertitlestyle}{}
+\renewcommand{\papertitlestyle}{\texorpdfstring{}{\scshape}}
+%%\renewcommand{\paperauthorstyle}{\texorpdfstring{\newline\itshape}{\break}}
+\renewcommand{\paperauthorstyle}{\texorpdfstring{, \hfill}{\break}}
+\renewcommand{\proctoctitleauthor}[2]{%
+  \texorpdfstring{{\paperauthorstyle #2}{\papertitlestyle #1}}%
+  {{\papertitlestyle #1}}}
+\renewcommand{\paperauthorstyle}{\texorpdfstring{\itshape}{}}
+\renewcommand{\papertitlestyle}{\texorpdfstring{\newline}{\break}}
+\renewcommand{\confstylechecktitle}{\vspace*{0.3cm} %
+  \bf \sc \Large \noindent \centerline}
+\renewcommand{\confstylecheckauthor}{\large \it \noindent \centerline}
+\makeindex
+
+%%%===========  PROCEEDINGS  ===========
+\begin{document}
+
+\frontmatter
+%%\layout
+%%\begin{figure}
+%%    \setlayoutscale{0.8} \tocdiagram
+%%    \caption{Table of Contents entry parameters} \label{fig:tocp}
+%%\end{figure}
+%%\begin{figure}
+%%    \setlayoutscale{0.8} \currenttoc \tocdesign
+%%    \caption{Typical Table of Contents entry for this document}
+%%    \label{fig:thistoc}
+%%\end{figure}
+%%\clearsingleordoublepage
+%\setcounter{page}{1}
+\pdfbookmark[0]{Preamble}{preamble}
+\pdfbookmark[1]{Cover}{cover}
+%\maketitle
+\setcounter{page}{1}
+\includepdf[noautoscale,pages=1,link]{\PICTPATH Titel.pdf}
+\addtocontents{toc}{\vskip 1cm}
+\addtocontents{toc}{\centerline{\huge\textsc{Conference Program}}}
+\renewcommand{\contentsname}{\texorpdfstring{}{Conference Program}}
+\newpage
+\vspace*{1.7cm}
+\pdfbookmark[1]{Publishing informations}{publishing}
+\thispagestyle{empty}
+\noindent {\bf Published by:}\\ Thomas Scheffler \& Christoph Lange (Hrsg.)\\ Fachbereich Energie und Information\\
+Hochschule für Technik und Wirtschaft Berlin (HTW Berlin)\\
+\url{https://htwb.de/fgsn2022}\\
+\vspace*{0.15cm}\newline
+\noindent {\bf ISBN: X-XXXX-XXXXXX}\\
+\vspace*{0.35cm}\newline
+\noindent {\bf Credits:}\\
+%Cover design: Firstname Lastname\\
+%Logo photo: Firstname Lastname\\
+%\LaTeX{} editor: Firstname Lastname\\
+using \LaTeX's `confproc' package, version 0.8 (modified by T. Scheffler)\\
+\vspace*{0.35cm}\newline
+%\noindent  Printed in City by Print-Company --- Month Year
+
+\otherpagestyle
+%%%-- Welcome letters
+\clearsingleordoublepage
+\vspace*{0.6cm}
+\thisotherpagestyle
+\pdfbookmark[1]{Welcome from Thomas Scheffler, Conference Chair}{welcome}
+\section*{Welcome from Thomas Scheffler, Conference Chair}
+\vspace*{0.8cm}
+\onehalfspace
+\begin{center}
+  \begin{minipage}[h]{14cm}
+    Es ist mir eine große Freude, Sie zum 19. GI/ITG KuVS Fachgespräch Sensornetze zu begrüßen.
+Herzlich willkommen in Berlin und an der Hochschule für Technik und Wirtschaft.
+Die FGSN-Workshop-Reihe hat eine lange Tradition als Forum für die Diskussion von Forschungen zu drahtlosen Sensor- und Multihop-Netzwerken, dem Internet der Dinge und andere verwandte Themen, bei denen insbesondere (ressourcenbeschränkte) drahtlose Knoten in verschiedenen Umgebungen miteinander interagieren. 
+
+Diese Tradition wird auch in diesem Jahr mit einem interessanten Programm fortgesetzt, das aus 9 Vorträgen, die relevante und aktuelle Forschungsthemen behandeln. 
+Ich bin überzeugt, dass dies zu einem sehr interaktiven Workshop mit lebhaften Diskussionen und intensivem Austausch zwischen allen Teilnehmern führen wird.
+
+Ich danken allen, die zum FGSN 2022 beigetragen und diesen Workshop möglich gemacht haben: den Autoren für die Einreichung ihrer Arbeiten, den Mitgliedern des Programmkomitees für die Begutachtung der Beiträge und dem Organisationsteam, insbesondere Thomas Wiele, Hannes Regner, Marcel Beausencourt, aber auch allen anderen, die zur Organisation des Workshops beigetragen haben.
+
+Der Hauptwert von Workshops besteht darin, Diskussionen zwischen Forschern zu ermöglichen und den Austausch von Ideen zu fördern.
+Ich hoffe sehr, dass Sie das Fachgespräch heute Abend mit neuen Einsichten verlassen und sich gern daran zurück erinnern werden.
+  \end{minipage}
+\end{center}
+\singlespace
+%%%-- Programm Committee 
+%\clearsingleordoublepage
+\vspace*{0.6cm}
+\thisotherpagestyle
+\pdfbookmark[1]{Programm Committee}{Programm Committee}
+\section*{Technical Programm Committee }
+\vspace*{0.8cm}
+\onehalfspace
+\begin{center}
+  \begin{minipage}[h]{14cm}
+\begin{itemize}
+\item    Mesut	Güneş, Otto von Guericke Universität Magdeburg
+\item Christoph	Lange, Hochschule für Technik und Wirtschaft Berlin
+\item Lutz	Molle, Hochschule für Technik und Wirtschaft Berlin
+\item Kristina	Sahlmann, University of Potsdam
+\item Thomas	Scheffler, Hochschule für Technik und Wirtschaft Berlin
+\item Matthias	Wählisch, Freie Universität Berlin
+\end{itemize}
+
+  \end{minipage}
+\end{center}
+\singlespace
+%%%==== Table of Contents ====
+\clearpage
+\tableofcontents
+
+%%%==== BEGINNING OF PAPERS ====
+\setcounter{npagespreamble}{\arabic{page}-1} % only useful for the 'pdftk' option
+\mainmatter
+\mainmattertocstyle
+%\input{\TEXTPATH expapersswitch}
+\procday{Fachgespräch Sensornetze 15.09.2022}
+  \session{Session 1:  WSN Optimierung und Messungen}
+
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=1,%
+    title = {Extended abstract: UAV assisted multiband WSN coverrage evaluation},%
+    author={Sven Pullwitt, Jan Schlichter, Lars Wolf},%
+    index={\index{Pullwitt, Sven}\index{Schlichter, Jan}\index{Wolf, Lars}},%
+  	]{p_002}
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=2,%
+    title = {Energy saving adjustments in a wireless sensor network for spatially and temporally highly resolved measurements of environmental parameters},%
+    author={Max Frohberg, Stefan Weidling},%
+    index={\index{Frohberg, Max}\index{Weidling, Stefan}},%
+  	]{p_002}
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=3,%
+    title = {Interoperability in the IoT - An Evaluation of the Semantic-Based Approach},%
+    author={Kristina Sahlmann, Florian Mikolajczak, Bettina Schnor},%
+    index={\index{Sahlmann, Kristina}\index{Mikolajczak, Florian}\index{Schnor, Bettina}},%
+  	]{p_002}
+
+
+
+  \session{Session 2: IoT Security und LoRa WAN}
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=4,%
+    title = {Securing SUIT-conform Firmware Update Management in the IoT with DNSSEC/DANE},%
+    author={Max Schrötter, Wolf-Jörgen Stange, Bettina Schnor},%
+    index={\index{Schrötter, Max}\index{Stange, Wolf-Jörgen}\index{Schnor, Bettina}}% \index{}
+ 	 ]{p_001}
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=5,%
+    title = {Investigating Constructive Interference for LoRa-based WSNs},%
+    author={Daniel Szafranski, Mazen Bouchur, Andreas Reinhardt},%
+    index={\index{Szafranski, Daniel}\index{Bouchur, Mazen}\index{Reinhardt, Andreas}}% \index{}
+  	]{p_001}
+    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=6,%
+    title = {First Steps Towards FIDO2 for the Internet of Things},%
+    author={Nils Ollrogge, Peter Kietzmann, Leandro Lanzieri, Thomas C. Schmidt, Matthias Wählisch},%
+    index={\index{Ollrogge, Nils}\index{Kietzmann, Peter}\index{Lanzieri, Leandro}\index{Schmidt, Thomas C.}\index{Wählisch, Matthias}}% \index{}
+  	]{p_001}
+
+  
+  
+  \session{Session 3: Sensoren und Anwendungen}
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=7,%
+    title = {Wireless Sensor Networks for Railway Track and Bridge Monitoring},%
+    author={Navya Sneha Chatharajupalli, Randolf Rotta, Jörg Nolte},%
+    index={\index{Chatharajupalli, Navya Sneha}\index{Rotta, Randolf}\index{Nolte, Jörg}},% \index{}
+  	]{p_002}
+   \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=8,%
+    title = {An IoT-based Sensor System to Capture Flower Bud Growth in Spring},%
+    author={Silvia Krug, Tino Hutschenreuther},%
+    index={\index{Krug, Silvia}\index{Hutschenreuther, Tino}}% \index{}
+      	]{p_002}
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=9,%
+    title = {Cattle Urination Behaviour Remote Monitoring using mmWave FMCW Radar},%
+    author={Yanhua Zhao, Vladica Sark, Markus Ulbricht, David Janke, Sabrina Hempel, Gundula Hoffmann, Thomas Amon, Barbara Amon, Milos Krstic, Eckhard Grass},%
+    index={\index{Zhao, Yanhua}\index{Sark, Vladica}\index{Ulbricht, Markus}\index{Janke, David}\index{Hempel, Sabrina}\index{Hoffmann, Gundula}\index{Amon, Thomas}\index{Amon, Barbara}\index{Krstic, Milos}\index{Grass, Eckhard}},% \index{}
+  	]{p_002}
+
+   % \paperid{75}{p_001}
+   % \paperid{27}{p_002}
+
+%%%==== END OF PAPERS ====
+\backmatter
+\backmattertocstyle
+\bibliographystyle{newapave}
+%%\bibliographystyle{newapa}
+{\footnotesize\bibliography{\procbibfile}}
+\insertindex
+\end{document}
