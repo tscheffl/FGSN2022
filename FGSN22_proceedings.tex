@@ -67,6 +67,7 @@
 \usepackage{mathptmx}
 \usepackage[super]{nth}
 \usepackage{hyperref}
+\usepackage{doi}
 \hypersetup{
 bookmarks=true,
 bookmarksdepth=2,
@@ -184,16 +185,22 @@ a4paper = true,
 \thispagestyle{empty}
 \noindent {\bf Published by:}\\ Thomas Scheffler \& Christoph Lange (Hrsg.)\\ Fachbereich Energie und Information\\
 Hochschule für Technik und Wirtschaft Berlin (HTW Berlin)\\
-\url{https://htwb.de/fgsn2022}\\
-\vspace*{0.15cm}\newline
-\noindent {\bf ISBN: X-XXXX-XXXXXX}\\
+\url{https://www.HTW-Berlin.de}\\
+\doi{10.34702/mncp-qb18}\\
+%\vspace*{0.15cm}\newline
+%\noindent {\bf ISBN: X-XXXX-XXXXXX}\\
 \vspace*{0.35cm}\newline
 \noindent {\bf Credits:}\\
 %Cover design: Firstname Lastname\\
 %Logo photo: Firstname Lastname\\
 %\LaTeX{} editor: Firstname Lastname\\
 using \LaTeX's `confproc' package, version 0.8 (modified by T. Scheffler)\\
+\url{https://github.com/tscheffl/FGSN2022}\\
 \vspace*{0.35cm}\newline
+\noindent {\bf Lizenz:}\\
+\url{https://creativecommons.org/licenses/by-nc-nd/4.0/}\\
+\includegraphics[width=0.15\textwidth]{pictures/by-nc-nd.eu.pdf} % Source of Icon: https://creativecommons.org/about/downloads/
+
 %\noindent  Printed in City by Print-Company --- Month Year
 
 \otherpagestyle
@@ -211,12 +218,12 @@ using \LaTeX's `confproc' package, version 0.8 (modified by T. Scheffler)\\
 Herzlich willkommen in Berlin und an der Hochschule für Technik und Wirtschaft.
 Die FGSN-Workshop-Reihe hat eine lange Tradition als Forum für die Diskussion von Forschungen zu drahtlosen Sensor- und Multihop-Netzwerken, dem Internet der Dinge und andere verwandte Themen, bei denen insbesondere (ressourcenbeschränkte) drahtlose Knoten in verschiedenen Umgebungen miteinander interagieren. 
 
-Diese Tradition wird auch in diesem Jahr mit einem interessanten Programm fortgesetzt, das aus 9 Vorträgen, die relevante und aktuelle Forschungsthemen behandeln. 
+Diese Tradition wird auch in diesem Jahr mit einem interessanten Programm fortgesetzt, das aus neun~Vorträgen besteht, die relevante und aktuelle Forschungsthemen behandeln. 
 Ich bin überzeugt, dass dies zu einem sehr interaktiven Workshop mit lebhaften Diskussionen und intensivem Austausch zwischen allen Teilnehmern führen wird.
 
 Ich danken allen, die zum FGSN 2022 beigetragen und diesen Workshop möglich gemacht haben: den Autoren für die Einreichung ihrer Arbeiten, den Mitgliedern des Programmkomitees für die Begutachtung der Beiträge und dem Organisationsteam, insbesondere Thomas Wiele, Hannes Regner, Marcel Beausencourt, aber auch allen anderen, die zur Organisation des Workshops beigetragen haben.
 
-Der Hauptwert von Workshops besteht darin, Diskussionen zwischen Forschern zu ermöglichen und den Austausch von Ideen zu fördern.
+Der Hauptwert von Workshops besteht darin, Diskussionen zwischen Forschenden zu ermöglichen und den Austausch von Ideen zu fördern.
 Ich hoffe sehr, dass Sie das Fachgespräch heute Abend mit neuen Einsichten verlassen und sich gern daran zurück erinnern werden.
   \end{minipage}
 \end{center}
@@ -235,7 +242,7 @@ Ich hoffe sehr, dass Sie das Fachgespräch heute Abend mit neuen Einsichten verl
 \item    Mesut	Güneş, Otto von Guericke Universität Magdeburg
 \item Christoph	Lange, Hochschule für Technik und Wirtschaft Berlin
 \item Lutz	Molle, Hochschule für Technik und Wirtschaft Berlin
-\item Kristina	Sahlmann, University of Potsdam
+\item Kristina	Sahlmann, Universität Potsdam
 \item Thomas	Scheffler, Hochschule für Technik und Wirtschaft Berlin
 \item Matthias	Wählisch, Freie Universität Berlin
 \end{itemize}
@@ -254,60 +261,68 @@ Ich hoffe sehr, dass Sie das Fachgespräch heute Abend mit neuen Einsichten verl
 %\input{\TEXTPATH expapersswitch}
 \procday{Fachgespräch Sensornetze 15.09.2022}
   \session{Session 1:  WSN Optimierung und Messungen}
-
+\clearsingleordoublepage
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=1,%
     title = {Extended abstract: UAV assisted multiband WSN coverrage evaluation},%
     author={Sven Pullwitt, Jan Schlichter, Lars Wolf},%
     index={\index{Pullwitt, Sven}\index{Schlichter, Jan}\index{Wolf, Lars}},%
-  	]{p_002}
+  	]{FGSN_2022_paper_0121}
+\clearsingleordoublepage
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=2,%
     title = {Energy saving adjustments in a wireless sensor network for spatially and temporally highly resolved measurements of environmental parameters},%
     author={Max Frohberg, Stefan Weidling},%
     index={\index{Frohberg, Max}\index{Weidling, Stefan}},%
-  	]{p_002}
+  	]{FGSN_2022_paper_8913}
+\clearsingleordoublepage
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=3,%
     title = {Interoperability in the IoT - An Evaluation of the Semantic-Based Approach},%
     author={Kristina Sahlmann, Florian Mikolajczak, Bettina Schnor},%
     index={\index{Sahlmann, Kristina}\index{Mikolajczak, Florian}\index{Schnor, Bettina}},%
-  	]{p_002}
+  	]{FGSN_2022_paper_6528}
 
 
 
   \session{Session 2: IoT Security und LoRa WAN}
+\clearsingleordoublepage  
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=4,%
     title = {Securing SUIT-conform Firmware Update Management in the IoT with DNSSEC/DANE},%
     author={Max Schrötter, Wolf-Jörgen Stange, Bettina Schnor},%
     index={\index{Schrötter, Max}\index{Stange, Wolf-Jörgen}\index{Schnor, Bettina}}% \index{}
- 	 ]{p_001}
+ 	 ]{FGSN_2022_paper_7802}
+\clearsingleordoublepage
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=5,%
     title = {Investigating Constructive Interference for LoRa-based WSNs},%
     author={Daniel Szafranski, Mazen Bouchur, Andreas Reinhardt},%
     index={\index{Szafranski, Daniel}\index{Bouchur, Mazen}\index{Reinhardt, Andreas}}% \index{}
-  	]{p_001}
+  	]{FGSN_2022_paper_2748}
+\clearsingleordoublepage
     \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=6,%
     title = {First Steps Towards FIDO2 for the Internet of Things},%
     author={Nils Ollrogge, Peter Kietzmann, Leandro Lanzieri, Thomas C. Schmidt, Matthias Wählisch},%
     index={\index{Ollrogge, Nils}\index{Kietzmann, Peter}\index{Lanzieri, Leandro}\index{Schmidt, Thomas C.}\index{Wählisch, Matthias}}% \index{}
-  	]{p_001}
+  	]{FGSN_2022_paper_5978}
 
   
   
   \session{Session 3: Sensoren und Anwendungen}
+\clearsingleordoublepage
   \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=7,%
     title = {Wireless Sensor Networks for Railway Track and Bridge Monitoring},%
     author={Navya Sneha Chatharajupalli, Randolf Rotta, Jörg Nolte},%
     index={\index{Chatharajupalli, Navya Sneha}\index{Rotta, Randolf}\index{Nolte, Jörg}},% \index{}
-  	]{p_002}
+  	]{FGSN_2022_paper_5184}
+\clearsingleordoublepage
    \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=8,%
     title = {An IoT-based Sensor System to Capture Flower Bud Growth in Spring},%
     author={Silvia Krug, Tino Hutschenreuther},%
     index={\index{Krug, Silvia}\index{Hutschenreuther, Tino}}% \index{}
-      	]{p_002}
+      	]{FGSN_2022_paper_3943}
+\clearsingleordoublepage
   \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, switch=9,%
     title = {Cattle Urination Behaviour Remote Monitoring using mmWave FMCW Radar},%
     author={Yanhua Zhao, Vladica Sark, Markus Ulbricht, David Janke, Sabrina Hempel, Gundula Hoffmann, Thomas Amon, Barbara Amon, Milos Krstic, Eckhard Grass},%
     index={\index{Zhao, Yanhua}\index{Sark, Vladica}\index{Ulbricht, Markus}\index{Janke, David}\index{Hempel, Sabrina}\index{Hoffmann, Gundula}\index{Amon, Thomas}\index{Amon, Barbara}\index{Krstic, Milos}\index{Grass, Eckhard}},% \index{}
-  	]{p_002}
+  	]{FGSN_2022_paper_5386}
 
    % \paperid{75}{p_001}
    % \paperid{27}{p_002}
